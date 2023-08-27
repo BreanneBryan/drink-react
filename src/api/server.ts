@@ -2,7 +2,7 @@ const token = '972a01659d7ce33ea591116a74823f87e5937616cb109060'
 
 export const server_calls = {
     get: async () => { 
-        const response = await fetch('https://speakeasy.onrender.com//api/drinks',
+        const response = await fetch('https://speakeasy.onrender.com/api/drinks',
         {
             method: 'GET',
             headers: {
@@ -39,6 +39,7 @@ export const server_calls = {
 
         return await response.json()
     },
+// const l_url: string = "http://127.0.0.1:5000"
 
     update: async (id: string, data:any = {}) => {
         const response = await fetch(`https://speakeasy.onrender.com/api/drinks/${id}`,

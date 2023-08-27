@@ -6,6 +6,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
+    // { field: 'id', headerName: "ID", width: 90},  
     { field: 'name', headerName: "Name", flex: 1},
     { field: 'drink_type', headerName: "Drink Type", flex: 1},
     { field: 'flavor_profile', headerName: "Flavor Profile", flex: 1}

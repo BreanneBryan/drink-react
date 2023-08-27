@@ -28,8 +28,8 @@ const ContactForm = ( props:ContactFormProps) => {
       event.target.reset()
     } else {
       dispatch(chooseName(data.name));
-      dispatch(chooseType(data.type));
-      dispatch(chooseFlavor(data.flavor));
+      dispatch(chooseType(data.drink_type));
+      dispatch(chooseFlavor(data.flavor_profile));
 
       server_calls.create(store.getState())
       setTimeout(() => {window.location.reload()}, 1000);
@@ -47,12 +47,12 @@ const ContactForm = ( props:ContactFormProps) => {
           <Input {...register('name')} name='name' placeholder="Name" />
         </div>
         <div>
-          <label htmlFor="type">Type</label>
-          <Input {...register('type')} name='type' placeholder="Type" />
+          <label htmlFor="drink_type">Type</label>
+          <Input {...register('drink_type')} name='drink_type' placeholder="Type" />
         </div>
         <div>
-          <label htmlFor="flavor">Flavor</label>
-          <Input {...register('flavor')} name='flavor' placeholder="Flavor" />
+          <label htmlFor="flavor_profile">Flavor</label>
+          <Input {...register('flavor_profile')} name='flavor_profile' placeholder="Flavor" />
         </div>
         <div className="flex p-1">
           <Button className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
